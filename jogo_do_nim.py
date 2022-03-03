@@ -57,11 +57,11 @@ class Jogo_Do_NIM:
     def user_choose_play(self):
         self.retired_parts = int(input("Quantas peças você vai tirar? "))
         print('')
-        if self.retired_parts > self.parts_limit or self.retired_parts <= 0:
+        if self.retired_parts > self.parts_limit or self.removed_parts <= 0:
             print('Você deve tirar apenas o limite de peças permitido.')
             print('')
             self.user_choose_play()
-        return self.retired_parts
+        return self.removed_parts
 
     def comp_choose_play(self):
         if self.parts > self.parts_limit:
